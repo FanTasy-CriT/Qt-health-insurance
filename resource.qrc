@@ -1,0 +1,15 @@
+<RCC>
+    <qresource prefix="/">
+        <file>images/1279714-200.png</file>
+        <file>images/176696.png</file>
+        <file>images/2769524.png</file>
+        <file>images/5062832.png</file>
+        <file>images/cover.png</file>
+        <file>images/ui.png</file>
+        <file>images/menu.png</file>
+        <file>images/arrow_down.png</file>
+        <file>images/up.png</file>
+        <file>images/down.png</file>
+        <file>images/search.svg</file>
+    </qresource>
+</RCC>

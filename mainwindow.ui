@@ -1,0 +1,1592 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>748</width>
+    <height>449</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+font-weight: bold;
+    border: 1px solid #007ACC;
+    border-radius: 3px;
+    color: #FFFFFF;
+    background-color: qlineargradient(spread:pad, x1:0.5, y1:0, x2:0.5, y2:1, stop:0 #007ACC);
+    padding: 5px 10px;
+    font-size: 14px;
+}
+
+QPushButton:hover, QPushButton:focus {
+    background-color: qlineargradient(spread:pad, x1:0.5, y1:0, x2:0.5, y2:1, stop:0 #1E90FF, stop:1 #007ACC);
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(spread:pad, x1:0.5, y1:0, x2:0.5, y2:1, stop:0 #004C8C, stop:1 #007ACC);
+    border: 1px solid #1E90FF;
+}
+
+QPushButton:checked {
+    background-color: qlineargradient(spread:pad, x1:0.5, y1:0, x2:0.5, y2:1, stop:0 #1E90FF, stop:1 #007ACC);
+    border: 1px solid #1E90FF;
+}
+
+QPushButton:checked:pressed {
+    background-color: qlineargradient(spread:pad, x1:0.5, y1:0, x2:0.5, y2:1, stop:0 #004C8C, stop:1 #1E90FF);
+}
+
+/* Add animation for checked state */
+QPushButton:checked {
+    color: #FFFFFF;
+    background-color: #1E90FF;
+    border: 1px solid #1E90FF;
+    transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+}
+QWidget {
+    font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    font-size: 10pt;
+}
+QTableView {
+    border: 1px solid #CCCCCC;
+    selection-background-color: #007ACC;
+    selection-color: #FFFFFF;
+    gridline-color: #DDDDDD;
+}
+
+QHeaderView::section {
+    background-color: #F6F6F6;
+    color: #666666;
+    font-weight: bold;
+    padding: 4px;
+    border: none;
+}
+
+QTableView::item {
+    padding: 4px;
+    border: none;
+}
+
+QTableView::item:selected {
+    background-color: #007ACC;
+    color: #FFFFFF;
+}
+
+QComboBox {
+    color: black;
+    background-color: #F5F5F5; /* a light grey that's close to white */
+    border: 1px solid #D3D3D3; /* a light grey border */
+    padding: 1px 18px 1px 3px; /* spacing around the text */
+    min-width: 6em; /* minimum width of the combo box */
+}
+
+QComboBox::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 20px;
+    border-left-width: 1px;
+    border-left-color: #D3D3D3; /* match the border color */
+    border-left-style: solid;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    background-color: #F5F5F5; /* match the background color */
+}
+QComboBox::down-arrow {
+    image: url(&quot;:/images/arrow_down.png&quot;); /* replace with your own arrow image */
+}
+QRadioButton {
+    border-radius: 10px;
+    padding: 5px;
+}
+
+QRadioButton::indicator {
+    width: 12px;
+    height: 12px;
+    border: 2px solid #999999;
+    border-radius: 8px;
+}
+
+QRadioButton::indicator:checked {
+    background-color: #999999;
+}
+
+
+</string>
+   </property>
+   <widget class="QWidget" name="widget" native="true">
+    <property name="geometry">
+     <rect>
+      <x>4</x>
+      <y>20</y>
+      <width>72</width>
+      <height>389</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QWidget{
+background-color: #4299e1;
+border:0;
+border-bottom-right-radius:5px;
+border-top-right-radius:5px;
+border-top-left-radius:40px;
+}
+QPushButton{
+                    display: iniline-block;
+                    outline: 0;
+                    border: 0;
+                    cursor: pointer;
+                    background-color: #4299e1;
+                    border-radius: 4px;
+                    padding: 8px 16px;
+                    font-size: 12px;
+                    border-bottom: 0px solid #2b6cb0;
+                    font-weight: 600;
+                    color: white;
+                    line-height: 26px;
+                                              
+}
+QPushButton:hover{
+                        background: #1e80b1;
+}</string>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QPushButton" name="pushButton_6">
+       <property name="toolTip">
+        <string comment="rfge" extracomment="this"/>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset resource="resource.qrc">
+         <normaloff>:/images/menu.png</normaloff>:/images/menu.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>16</width>
+         <height>16</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton">
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset resource="resource.qrc">
+         <normaloff>:/images/2769524.png</normaloff>:/images/2769524.png</iconset>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_2">
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset resource="resource.qrc">
+         <normaloff>:/images/176696.png</normaloff>:/images/176696.png</iconset>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_3">
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset resource="resource.qrc">
+         <normaloff>:/images/1279714-200.png</normaloff>:/images/1279714-200.png</iconset>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_4">
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset resource="resource.qrc">
+         <normaloff>:/images/cover.png</normaloff>:/images/cover.png</iconset>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_5">
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset resource="resource.qrc">
+         <normaloff>:/images/5062832.png</normaloff>:/images/5062832.png</iconset>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QStackedWidget" name="stackedWidget">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>30</y>
+      <width>651</width>
+      <height>361</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>4</number>
+    </property>
+    <widget class="QWidget" name="comptabilite">
+     <widget class="QStackedWidget" name="comptabilite_2">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>712</width>
+        <height>381</height>
+       </rect>
+      </property>
+      <widget class="QWidget" name="CRUD">
+       <widget class="QLabel" name="label">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>-90</y>
+          <width>741</width>
+          <height>411</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap resource="resource.qrc">:/images/ui.png</pixmap>
+        </property>
+        <property name="scaledContents">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QWidget" name="layoutWidget">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>0</y>
+          <width>631</width>
+          <height>351</height>
+         </rect>
+        </property>
+        <layout class="QGridLayout" name="gridLayout">
+         <item row="2" column="0">
+          <widget class="QPushButton" name="Edit">
+           <property name="text">
+            <string>Modifier</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="0" colspan="2">
+          <widget class="QPushButton" name="metiers">
+           <property name="text">
+            <string>Metiers</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1" rowspan="2">
+          <layout class="QVBoxLayout" name="viewanddelete">
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_3">
+             <item>
+              <widget class="QLineEdit" name="lineEdit_2">
+               <property name="styleSheet">
+                <string notr="true">/* Style for the SearchBar's QLineEdit */
+QLineEdit {
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #888888;
+    padding-left: 25px;
+    font-size: 16px;
+    color: #333333;
+    selection-background-color: #cccccc;
+    selection-color: #333333;
+}
+QLineEdit:focus {
+  border-color: #1e90ff;
+}
+
+</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QToolButton" name="search_compt">
+               <property name="styleSheet">
+                <string notr="true">border : 0;
+background-color: transparent;</string>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+               <property name="icon">
+                <iconset resource="resource.qrc">
+                 <normaloff>:/images/search.svg</normaloff>:/images/search.svg</iconset>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="pushButton_11">
+               <property name="text">
+                <string/>
+               </property>
+               <property name="icon">
+                <iconset resource="resource.qrc">
+                 <normaloff>:/images/up.png</normaloff>:/images/up.png</iconset>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="pushButton_9">
+               <property name="text">
+                <string/>
+               </property>
+               <property name="icon">
+                <iconset resource="resource.qrc">
+                 <normaloff>:/images/down.png</normaloff>:/images/down.png</iconset>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <widget class="QTableView" name="tableView"/>
+           </item>
+           <item>
+            <widget class="QPushButton" name="delete_2">
+             <property name="text">
+              <string>Supprimer</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_4">
+             <item>
+              <widget class="QPushButton" name="pushButton_7">
+               <property name="text">
+                <string>Comptabilite</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="pushButton_8">
+               <property name="text">
+                <string>Materiels</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="pushButton_10">
+               <property name="text">
+                <string>Donations</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </item>
+         <item row="1" column="0">
+          <layout class="QGridLayout" name="add">
+           <item row="8" column="0" colspan="3">
+            <widget class="QComboBox" name="materiel"/>
+           </item>
+           <item row="7" column="1" colspan="2">
+            <widget class="QLineEdit" name="lineEdit_5"/>
+           </item>
+           <item row="7" column="0">
+            <widget class="QLabel" name="label_6">
+             <property name="text">
+              <string>montant</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="data_label">
+             <property name="text">
+              <string>date</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="0">
+            <widget class="QLabel" name="Quantity">
+             <property name="text">
+              <string>quantité</string>
+             </property>
+            </widget>
+           </item>
+           <item row="9" column="0" colspan="3">
+            <widget class="QPushButton" name="Add">
+             <property name="text">
+              <string>Ajouter</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="0" colspan="3">
+            <widget class="QWidget" name="widget_3" native="true">
+             <layout class="QHBoxLayout" name="horizontalLayout_2">
+              <item>
+               <widget class="QRadioButton" name="rendu">
+                <property name="text">
+                 <string>depenser</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <spacer name="horizontalSpacer">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="recu">
+                <property name="text">
+                 <string>recevoir</string>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="4" column="1" colspan="2">
+            <widget class="QSpinBox" name="spinBox"/>
+           </item>
+           <item row="1" column="1" colspan="2">
+            <widget class="QLineEdit" name="IDline"/>
+           </item>
+           <item row="2" column="1" colspan="2">
+            <widget class="QDateEdit" name="date"/>
+           </item>
+           <item row="6" column="0" colspan="3">
+            <widget class="QComboBox" name="Dropdown"/>
+           </item>
+          </layout>
+         </item>
+         <item row="3" column="0" colspan="2" alignment="Qt::AlignBottom">
+          <widget class="QFrame" name="frame">
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Raised</enum>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="Metiers">
+       <widget class="QWidget" name="layoutWidget">
+        <property name="geometry">
+         <rect>
+          <x>267</x>
+          <y>10</y>
+          <width>381</width>
+          <height>351</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_2">
+         <item>
+          <widget class="QPushButton" name="PDF">
+           <property name="text">
+            <string>PDF</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QTableView" name="history"/>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pushButton_25">
+           <property name="text">
+            <string>Excel</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="layoutWidget">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>9</y>
+          <width>258</width>
+          <height>351</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_3">
+         <item>
+          <widget class="QGraphicsView" name="graphicsView"/>
+         </item>
+         <item>
+          <widget class="QPushButton" name="SWITCH_CRUD">
+           <property name="text">
+            <string>CRUD</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="SDF">
+     <widget class="QStackedWidget" name="stackedWidget_4">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>29</y>
+        <width>651</width>
+        <height>331</height>
+       </rect>
+      </property>
+      <widget class="QWidget" name="CRUD_4">
+       <widget class="QWidget" name="layoutWidget_2">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>631</width>
+          <height>316</height>
+         </rect>
+        </property>
+        <layout class="QGridLayout" name="CRUD_3">
+         <item row="4" column="0">
+          <widget class="QPushButton" name="Add_2">
+           <property name="text">
+            <string>Ajouter</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0">
+          <layout class="QGridLayout" name="add_2">
+           <item row="3" column="0">
+            <widget class="QLabel" name="Quantity_2">
+             <property name="text">
+              <string>prenom</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_2">
+             <property name="text">
+              <string>ID</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1" colspan="2">
+            <widget class="QLineEdit" name="nom"/>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="ID_2">
+             <property name="text">
+              <string>nom</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="0">
+            <widget class="QLabel" name="data_label_2">
+             <property name="text">
+              <string>date de naissance</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="1" colspan="2">
+            <widget class="QDateEdit" name="datedenaissance"/>
+           </item>
+           <item row="5" column="0">
+            <widget class="QLabel" name="label_3">
+             <property name="text">
+              <string>état</string>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="0">
+            <widget class="QLabel" name="label_4">
+             <property name="text">
+              <string>Besoin</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="1" colspan="2">
+            <widget class="QLineEdit" name="preno"/>
+           </item>
+           <item row="0" column="1" colspan="2">
+            <widget class="QLineEdit" name="ID_3"/>
+           </item>
+           <item row="6" column="1" colspan="2">
+            <widget class="QComboBox" name="dropdowsante">
+             <item>
+              <property name="text">
+               <string>Sante</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+           <item row="5" column="1" colspan="2">
+            <widget class="QComboBox" name="dropdownetat">
+             <item>
+              <property name="text">
+               <string>Marie</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>celibataire </string>
+              </property>
+             </item>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item row="2" column="1" rowspan="3">
+          <layout class="QVBoxLayout" name="viewanddelete_2">
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_9">
+             <item>
+              <widget class="QLineEdit" name="searchsdf">
+               <property name="styleSheet">
+                <string notr="true">/* Style for the SearchBar's QLineEdit */
+QLineEdit {
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #888888;
+    padding-left: 25px;
+    font-size: 16px;
+    color: #333333;
+    selection-background-color: #cccccc;
+    selection-color: #333333;
+}
+QLineEdit:focus {
+  border-color: #1e90ff;
+}
+
+</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QToolButton" name="search_compt_3">
+               <property name="styleSheet">
+                <string notr="true">border : 0;
+background-color: transparent;</string>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+               <property name="icon">
+                <iconset resource="resource.qrc">
+                 <normaloff>:/images/search.svg</normaloff>:/images/search.svg</iconset>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="pushButton_18">
+               <property name="text">
+                <string/>
+               </property>
+               <property name="icon">
+                <iconset resource="resource.qrc">
+                 <normaloff>:/images/up.png</normaloff>:/images/up.png</iconset>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="pushButton_19">
+               <property name="text">
+                <string/>
+               </property>
+               <property name="icon">
+                <iconset resource="resource.qrc">
+                 <normaloff>:/images/down.png</normaloff>:/images/down.png</iconset>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <widget class="QTableView" name="table_sdf"/>
+           </item>
+           <item>
+            <widget class="QPushButton" name="delete_3">
+             <property name="text">
+              <string>Supprimer</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_5"/>
+           </item>
+          </layout>
+         </item>
+         <item row="3" column="0">
+          <widget class="QPushButton" name="Edit_2">
+           <property name="text">
+            <string>Modifier</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="0">
+          <widget class="QPushButton" name="pushButton_20">
+           <property name="text">
+            <string>Mailing</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QPushButton" name="pushButton_15">
+           <property name="text">
+            <string>Metiers</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="Metiers_3">
+       <widget class="QPushButton" name="pushButton_16">
+        <property name="geometry">
+         <rect>
+          <x>330</x>
+          <y>10</y>
+          <width>291</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>PDF</string>
+        </property>
+       </widget>
+       <widget class="QGraphicsView" name="graphicsView_3">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>311</width>
+          <height>291</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_17">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>300</y>
+          <width>621</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>CRUD</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="qr_id">
+        <property name="geometry">
+         <rect>
+          <x>450</x>
+          <y>80</y>
+          <width>113</width>
+          <height>20</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_20">
+        <property name="geometry">
+         <rect>
+          <x>390</x>
+          <y>80</y>
+          <width>47</width>
+          <height>14</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>ID </string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_24">
+        <property name="geometry">
+         <rect>
+          <x>420</x>
+          <y>110</y>
+          <width>75</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>QR</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="qrcode">
+        <property name="geometry">
+         <rect>
+          <x>420</x>
+          <y>150</y>
+          <width>151</width>
+          <height>111</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="Mailing">
+       <widget class="QPushButton" name="pushButton_22">
+        <property name="geometry">
+         <rect>
+          <x>260</x>
+          <y>280</y>
+          <width>75</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>CRUD</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_23">
+        <property name="geometry">
+         <rect>
+          <x>550</x>
+          <y>120</y>
+          <width>75</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Envoyee</string>
+        </property>
+       </widget>
+       <widget class="QWidget" name="layoutWidget">
+        <property name="geometry">
+         <rect>
+          <x>80</x>
+          <y>10</y>
+          <width>451</width>
+          <height>252</height>
+         </rect>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_2">
+         <item row="0" column="0">
+          <widget class="QLabel" name="label_17">
+           <property name="text">
+            <string>vers</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QLineEdit" name="to"/>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="label_18">
+           <property name="text">
+            <string>Sujet</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QLineEdit" name="subject"/>
+         </item>
+         <item row="2" column="0">
+          <widget class="QLabel" name="label_19">
+           <property name="text">
+            <string>Content</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="1">
+          <widget class="QPlainTextEdit" name="content"/>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="Dons">
+     <widget class="QStackedWidget" name="stackedWidget_2">
+      <property name="geometry">
+       <rect>
+        <x>-40</x>
+        <y>0</y>
+        <width>691</width>
+        <height>351</height>
+       </rect>
+      </property>
+      <widget class="QWidget" name="CURD">
+       <widget class="QWidget" name="layoutWidget_4">
+        <property name="geometry">
+         <rect>
+          <x>50</x>
+          <y>30</y>
+          <width>641</width>
+          <height>321</height>
+         </rect>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_4">
+         <item row="2" column="0">
+          <widget class="QLabel" name="label_12">
+           <property name="text">
+            <string>Nom</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="0">
+          <widget class="QLabel" name="label_9">
+           <property name="text">
+            <string>Type</string>
+           </property>
+          </widget>
+         </item>
+         <item row="6" column="0" colspan="3">
+          <widget class="QPushButton" name="add_don">
+           <property name="text">
+            <string>Ajouter</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="2">
+          <widget class="QLineEdit" name="nom_don"/>
+         </item>
+         <item row="7" column="3">
+          <widget class="QPushButton" name="delte_don">
+           <property name="text">
+            <string>Delete</string>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="2">
+          <widget class="QComboBox" name="dropdown_etat">
+           <item>
+            <property name="text">
+             <string>success</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>echec</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>en cours</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+         <item row="7" column="0" colspan="3">
+          <widget class="QPushButton" name="edit_don">
+           <property name="text">
+            <string>Modifier</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="0">
+          <widget class="QLabel" name="label_11">
+           <property name="text">
+            <string>Date</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="label_5">
+           <property name="text">
+            <string>ID</string>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="0">
+          <widget class="QLabel" name="label_10">
+           <property name="text">
+            <string>Etat</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="2">
+          <widget class="QDateEdit" name="date_don"/>
+         </item>
+         <item row="4" column="2">
+          <widget class="QComboBox" name="dropdown_type">
+           <item>
+            <property name="text">
+             <string>Materiel</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Solde</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+         <item row="1" column="2">
+          <widget class="QLineEdit" name="id_dons"/>
+         </item>
+         <item row="1" column="3">
+          <layout class="QHBoxLayout" name="horizontalLayout_7">
+           <item>
+            <widget class="QLineEdit" name="lineEdit_3">
+             <property name="styleSheet">
+              <string notr="true">/* Style for the SearchBar's QLineEdit */
+QLineEdit {
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #888888;
+    padding-left: 25px;
+    font-size: 16px;
+    color: #333333;
+    selection-background-color: #cccccc;
+    selection-color: #333333;
+}
+QLineEdit:focus {
+  border-color: #1e90ff;
+}
+
+</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QToolButton" name="search_compt_2">
+             <property name="styleSheet">
+              <string notr="true">border : 0;
+background-color: transparent;</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="icon">
+              <iconset resource="resource.qrc">
+               <normaloff>:/images/search.svg</normaloff>:/images/search.svg</iconset>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="pushButton_13">
+             <property name="text">
+              <string/>
+             </property>
+             <property name="icon">
+              <iconset resource="resource.qrc">
+               <normaloff>:/images/up.png</normaloff>:/images/up.png</iconset>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="pushButton_12">
+             <property name="text">
+              <string/>
+             </property>
+             <property name="icon">
+              <iconset resource="resource.qrc">
+               <normaloff>:/images/down.png</normaloff>:/images/down.png</iconset>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item row="2" column="3" rowspan="5">
+          <widget class="QTableView" name="table_don"/>
+         </item>
+         <item row="0" column="0" colspan="4">
+          <widget class="QPushButton" name="pushButton_34">
+           <property name="text">
+            <string>Metiers</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="metiers_2">
+       <widget class="QPushButton" name="pdf_don">
+        <property name="geometry">
+         <rect>
+          <x>354</x>
+          <y>10</y>
+          <width>311</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>PDF</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="crud_don">
+        <property name="geometry">
+         <rect>
+          <x>50</x>
+          <y>320</y>
+          <width>631</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>CRUD</string>
+        </property>
+       </widget>
+       <widget class="QGraphicsView" name="graphicsView_2">
+        <property name="geometry">
+         <rect>
+          <x>45</x>
+          <y>0</y>
+          <width>281</width>
+          <height>311</height>
+         </rect>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="Materials"/>
+    <widget class="QWidget" name="services">
+     <widget class="QStackedWidget" name="stackedWidget_3">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>-40</y>
+        <width>661</width>
+        <height>401</height>
+       </rect>
+      </property>
+      <widget class="QWidget" name="CRUD_2">
+       <widget class="QWidget" name="layoutWidget_3">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>50</y>
+          <width>651</width>
+          <height>331</height>
+         </rect>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_3">
+         <item row="1" column="0">
+          <widget class="QPushButton" name="Edit_3">
+           <property name="text">
+            <string>Modifier</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0">
+          <widget class="QPushButton" name="Add_3">
+           <property name="text">
+            <string>Ajouter</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="0">
+          <layout class="QGridLayout" name="add_3">
+           <item row="2" column="1" colspan="2">
+            <widget class="QLineEdit" name="nom_2"/>
+           </item>
+           <item row="0" column="0" colspan="3">
+            <widget class="QLineEdit" name="lineEdit"/>
+           </item>
+           <item row="4" column="1" colspan="2">
+            <widget class="QComboBox" name="dropdownlocation">
+             <item>
+              <property name="text">
+               <string>Ariana</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Beja</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Ben Arous</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Bizerte</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Gabes</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Gafsa</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Jendouba</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Kairouan</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Kasserine</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Kebili</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Kef</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Mahdia</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Manouba</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Medenine</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Monastir</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Nabeul</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Sfax</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Sidi Bouzid</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Siliana</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Sousse</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Tataouine</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Tozeur</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Tunis</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Zaghouan</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+           <item row="4" column="0">
+            <widget class="QLabel" name="label_8">
+             <property name="text">
+              <string>Location</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="1" colspan="2">
+            <widget class="QComboBox" name="dropdowntype">
+             <item>
+              <property name="text">
+               <string>Alimentation</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Sante</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="ID_4">
+             <property name="text">
+              <string>nom</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0">
+            <widget class="QLabel" name="label_7">
+             <property name="text">
+              <string>Type</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="label_13">
+             <property name="text">
+              <string>date</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1" colspan="2">
+            <widget class="QDateEdit" name="dateEdit">
+             <property name="dateTime">
+              <datetime>
+               <hour>0</hour>
+               <minute>0</minute>
+               <second>0</second>
+               <year>2023</year>
+               <month>1</month>
+               <day>1</day>
+              </datetime>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item row="0" column="1" rowspan="3">
+          <layout class="QVBoxLayout" name="viewanddelete_3">
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_8">
+             <item>
+              <widget class="QLineEdit" name="searchlineedit">
+               <property name="styleSheet">
+                <string notr="true">/* Style for the SearchBar's QLineEdit */
+QLineEdit {
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #888888;
+    padding-left: 25px;
+    font-size: 16px;
+    color: #333333;
+    selection-background-color: #cccccc;
+    selection-color: #333333;
+}
+QLineEdit:focus {
+  border-color: #1e90ff;
+}
+
+</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QToolButton" name="searchservice">
+               <property name="styleSheet">
+                <string notr="true">border : 0;
+background-color: transparent;</string>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+               <property name="icon">
+                <iconset resource="resource.qrc">
+                 <normaloff>:/images/search.svg</normaloff>:/images/search.svg</iconset>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="triupservice">
+               <property name="text">
+                <string/>
+               </property>
+               <property name="icon">
+                <iconset resource="resource.qrc">
+                 <normaloff>:/images/up.png</normaloff>:/images/up.png</iconset>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="tridownservice">
+               <property name="text">
+                <string/>
+               </property>
+               <property name="icon">
+                <iconset resource="resource.qrc">
+                 <normaloff>:/images/down.png</normaloff>:/images/down.png</iconset>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <widget class="QTableView" name="table_service"/>
+           </item>
+           <item>
+            <widget class="QPushButton" name="delete_4">
+             <property name="text">
+              <string>Supprimer</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_6"/>
+           </item>
+          </layout>
+         </item>
+         <item row="3" column="0" colspan="2">
+          <widget class="QPushButton" name="pushButton_14">
+           <property name="text">
+            <string>Metiers</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="Metiers_2">
+       <widget class="QPushButton" name="crud_don_2">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>360</y>
+          <width>621</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>CRUD</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pdf_service">
+        <property name="geometry">
+         <rect>
+          <x>390</x>
+          <y>10</y>
+          <width>261</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>PDF</string>
+        </property>
+       </widget>
+       <widget class="QGraphicsView" name="graphicsView_services">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>50</y>
+          <width>221</width>
+          <height>291</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_15">
+        <property name="geometry">
+         <rect>
+          <x>520</x>
+          <y>50</y>
+          <width>131</width>
+          <height>281</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QWidget" name="layoutWidget">
+        <property name="geometry">
+         <rect>
+          <x>240</x>
+          <y>50</y>
+          <width>274</width>
+          <height>291</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_4">
+         <item>
+          <widget class="QCalendarWidget" name="calendarWidget"/>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_16">
+           <property name="text">
+            <string>Disponibilité</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_14">
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pushButton_21">
+           <property name="text">
+            <string>PDF</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+     </widget>
+    </widget>
+   </widget>
+   <zorder>stackedWidget</zorder>
+   <zorder>widget</zorder>
+  </widget>
+  <widget class="QStatusBar" name="statusbar">
+   <property name="sizeGripEnabled">
+    <bool>false</bool>
+   </property>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="resource.qrc"/>
+ </resources>
+ <connections/>
+</ui>

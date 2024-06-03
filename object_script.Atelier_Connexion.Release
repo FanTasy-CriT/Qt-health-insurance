@@ -1,0 +1,16 @@
+INPUT(
+./release/email.o
+./release/emailaddress.o
+./release/smtpclient.o
+./release/comptabilite_CURD.o
+./release/comptabilite_metiers.o
+./release/main.o
+./release/mainwindow.o
+./release/qrcode.o
+./release/sdf_crud.o
+./release/service_crud.o
+./release/table_don.o
+./release/qrc_resource.o
+./release/moc_smtpclient.o
+./release/moc_mainwindow.o
+);

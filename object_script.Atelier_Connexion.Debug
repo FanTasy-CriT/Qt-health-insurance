@@ -1,0 +1,16 @@
+INPUT(
+./debug/email.o
+./debug/emailaddress.o
+./debug/smtpclient.o
+./debug/comptabilite_CURD.o
+./debug/comptabilite_metiers.o
+./debug/main.o
+./debug/mainwindow.o
+./debug/qrcode.o
+./debug/sdf_crud.o
+./debug/service_crud.o
+./debug/table_don.o
+./debug/qrc_resource.o
+./debug/moc_smtpclient.o
+./debug/moc_mainwindow.o
+);
